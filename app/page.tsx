@@ -35,12 +35,19 @@ export default function Home() {
           <p className="hero-lede">Itadbeer is a close-knit team of developers and designers turning ambitious ideas into fast, reliable web products, mobile apps, and custom software.</p>
           <div className="hero-actions"><a className="button" href="#contact">Tell us about your project <Arrow /></a><a className="text-link" href="#work">Explore our work <span>↓</span></a></div>
         </div>
-        <div className="hero-visual" aria-label="A visual representation of Itadbeer's product engineering workflow">
-          <div className="code-window">
-            <div className="window-bar"><span /><span /><span /><b>itadbeer / build.ts</b></div>
-            <pre><code><i>01</i> <em>const</em> idea = <strong>understand</strong>(business);{`\n`}<i>02</i>{`\n`}<i>03</i> <em>const</em> product = <strong>design</strong>({`{`}{`\n`}<i>04</i>   clarity: <u>true</u>,{`\n`}<i>05</i>   scalable: <u>true</u>,{`\n`}<i>06</i>   human: <u>true</u>{`\n`}<i>07</i> {`}`});{`\n`}<i>08</i>{`\n`}<i>09</i> <strong>ship</strong>(product); <span className="code-comment">// built to last</span></code></pre>
+        <div className="hero-visual" aria-label="A business idea progressing from planning to launch and growth">
+          <div className="business-window">
+            <div className="business-bar"><span className="business-logo">iT</span><div><small>YOUR DIGITAL PRODUCT</small><b>From idea to impact</b></div><span className="live-pill"><i /> On track</span></div>
+            <div className="journey">
+              <div className="journey-step complete"><span>✓</span><div><small>STEP 1</small><b>Understand your goal</b></div></div>
+              <i className="journey-line complete-line" />
+              <div className="journey-step active"><span>02</span><div><small>STEP 2</small><b>Design the solution</b></div></div>
+              <i className="journey-line" />
+              <div className="journey-step"><span>03</span><div><small>STEP 3</small><b>Launch & grow</b></div></div>
+            </div>
+            <div className="business-outcome"><div><small>WHAT YOU GET</small><strong>A clear, useful product<br />built around your business.</strong></div><span className="outcome-arrow">↗</span></div>
           </div>
-          <div className="signal-card"><span className="signal-dot" /><div><small>PROJECT STATUS</small><b>Ready to build</b></div><strong>100%</strong></div>
+          <div className="signal-card"><span className="signal-dot" /><div><small>PARTNERSHIP</small><b>Clear at every step</b></div><strong>→</strong></div>
           <div className="orbit orbit-one" /><div className="orbit orbit-two" />
         </div>
       </section>
