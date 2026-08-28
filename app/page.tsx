@@ -52,8 +52,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="trust-strip" aria-label="Core capabilities"><p>BUILT WITH MODERN, PROVEN TECHNOLOGY</p><div><span>Laravel</span><span>Vue.js</span><span>Python</span><span>Flutter</span><span>WordPress</span><span>REST APIs</span></div></section>
-
       <section className="section services" id="services">
         <div className="section-heading"><div><p className="kicker">WHAT WE DO</p><h2>From first idea to<br />working product.</h2></div><p>We combine product thinking, thoughtful design, and dependable engineering to create software that earns its place in your business.</p></div>
         <div className="services-grid">{services.map((s) => <article className="service-card" key={s.n}><span className="service-number">{s.n}</span><div className="service-icon" aria-hidden="true">{s.n === '01' ? '⌘' : s.n === '02' ? '{ }' : s.n === '03' ? '▯' : '◇'}</div><h3>{s.title}</h3><p>{s.text}</p></article>)}</div>
