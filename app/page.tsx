@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main>
       <nav className="nav-shell" aria-label="Primary navigation">
-        <a className="brand" href="#top" aria-label="Itadbeer home"><span className="brand-mark">iT</span><span>itadbeer</span></a>
+        <a className="logo-lockup" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a>
         <div className="nav-links"><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#process">Process</a></div>
         <a className="button button-small" href="#contact">Start a project</a>
       </nav>
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="cta-orbit" aria-hidden="true"><span /><span /></div><p className="kicker kicker-light">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s build something<br />that matters.</h2><p>Tell us what you&apos;re working on. We&apos;ll listen, ask useful questions, and come back with a clear next step.</p><a className="button button-light" href="mailto:edris.qeshm2@gmail.com">Start the conversation <Arrow /></a>
       </section>
 
-      <footer><a className="brand brand-footer" href="#top"><span className="brand-mark">iT</span><span>itadbeer</span></a><p>Powering your business with technology.</p><div><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with care in Qeshm.</small></footer>
+      <footer><a className="logo-lockup logo-footer" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a><p>Powering your business with technology.</p><div><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with care in Qeshm.</small></footer>
     </main>
   );
 }
