@@ -65,8 +65,12 @@ export default function Home() {
       </section>
 
       <section className="about" id="about">
-        <div className="about-grid"><div><p className="kicker kicker-light">ABOUT ITADBEER</p><h2>Small team.<br />Serious craft.</h2></div><div className="about-copy"><p className="about-lede">Founded in 2023, Itadbeer is an independent software development team built around a simple belief: the best digital products come from close collaboration.</p><p>We stay intentionally focused. You work directly with the people designing and building your product—without layers of account management or vague handoffs. That means clearer decisions, faster feedback, and software with purpose.</p><div className="facts"><div><strong>2023</strong><span>Founded</span></div><div><strong>2–10</strong><span>Focused team</span></div><div><strong>End-to-end</strong><span>Product delivery</span></div></div></div></div>
-        <div className="team-strip"><div><span className="avatar avatar-one">ER</span><span className="avatar avatar-two">AA</span></div><p><strong>Led by builders.</strong><br />Developers and designers who care about the details.</p><a href="#contact">Work with our team <Arrow /></a></div>
+        <div className="about-grid"><div><p className="kicker kicker-light">ABOUT ITADBEER</p><h2>Small team.<br />Serious craft.</h2></div><div className="about-copy"><p className="about-lede">Founded in 2023, Itadbeer is an independent software development team built around a simple belief: the best digital products come from close collaboration.</p><p>We stay intentionally focused. You work directly with the people designing and building your product—without layers of account management or vague handoffs. That means clearer decisions, faster feedback, and software with purpose.</p><div className="facts"><div><strong>2023</strong><span>Founded</span></div><div><strong>2</strong><span>Core team</span></div><div><strong>End-to-end</strong><span>Product delivery</span></div></div></div></div>
+        <div className="team-members" aria-label="Itadbeer team members">
+          <article><span className="avatar avatar-one">ER</span><div><small>CO-FOUNDER · BACKEND</small><h3>Edris Ranjbar</h3><p>Product architecture, APIs, databases, and reliable systems.</p></div></article>
+          <article><span className="avatar avatar-two">AA</span><div><small>FRONT-END DEVELOPER</small><h3>Abdollah Ashrafi</h3><p>Responsive interfaces and thoughtful customer experiences.</p></div></article>
+          <a href="#contact">Work directly with us <Arrow /></a>
+        </div>
       </section>
 
       <section className="section process" id="process">
@@ -75,10 +79,10 @@ export default function Home() {
       </section>
 
       <section className="cta" id="contact">
-        <div className="cta-orbit" aria-hidden="true"><span /><span /></div><p className="kicker kicker-light">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s build something<br />that matters.</h2><p>Tell us what you&apos;re working on. We&apos;ll listen, ask useful questions, and come back with a clear next step.</p><a className="button button-light" href="mailto:edris.qeshm2@gmail.com">Start the conversation <Arrow /></a>
+        <div className="cta-orbit" aria-hidden="true"><span /><span /></div><p className="kicker kicker-light">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s build something<br />that matters.</h2><p>Tell us what you&apos;re working on. We&apos;ll listen, ask useful questions, and come back with a clear next step.</p><div className="contact-actions"><a className="button button-light" href="https://t.me/edicodes_pv" target="_blank" rel="noreferrer">Message on Telegram <Arrow /></a><a className="contact-email" href="mailto:edris.qeshm2@gmail.com">Or send us an email →</a></div>
       </section>
 
-      <footer><a className="logo-lockup logo-footer" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a><p>Powering your business with technology.</p><div><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with care in Qeshm.</small></footer>
+      <footer><a className="logo-lockup logo-footer" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a><p>Powering your business with technology.</p><div><a href="https://t.me/edicodes_pv" target="_blank" rel="noreferrer">Telegram · @edicodes_pv</a><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with care in Qeshm.</small></footer>
     </main>
   );
 }
