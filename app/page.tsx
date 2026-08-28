@@ -31,7 +31,6 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow"><span /> Independent software studio · Qeshm, Iran</p>
           <h1>We build software that moves your business forward.</h1>
           <p className="hero-lede">Itadbeer is a close-knit team of developers and designers turning ambitious ideas into fast, reliable web products, mobile apps, and custom software.</p>
           <div className="hero-actions"><a className="button" href="#contact">Tell us about your project <Arrow /></a><a className="text-link" href="#work">Explore our work <span>↓</span></a></div>
