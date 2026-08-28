@@ -56,7 +56,7 @@ export default function Home() {
 
       <section className="section services" id="services">
         <div className="section-heading"><div><p className="kicker">WHAT WE DO</p><h2>From first idea to<br />working product.</h2></div><p>We combine product thinking, thoughtful design, and dependable engineering to create software that earns its place in your business.</p></div>
-        <div className="services-grid">{services.map((s) => <article className="service-card" key={s.n}><span className="service-number">{s.n}</span><div className="service-icon" aria-hidden="true">{s.n === '01' ? '⌘' : s.n === '02' ? '{ }' : s.n === '03' ? '▯' : '◇'}</div><h3>{s.title}</h3><p>{s.text}</p><div className="tags">{s.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}</div>
+        <div className="services-grid">{services.map((s) => <article className="service-card" key={s.n}><span className="service-number">{s.n}</span><div className="service-icon" aria-hidden="true">{s.n === '01' ? '⌘' : s.n === '02' ? '{ }' : s.n === '03' ? '▯' : '◇'}</div><h3>{s.title}</h3><p>{s.text}</p></article>)}</div>
       </section>
 
       <section className="section work" id="work">
@@ -82,7 +82,7 @@ export default function Home() {
         <div className="cta-orbit" aria-hidden="true"><span /><span /></div><p className="kicker kicker-light">HAVE A PROJECT IN MIND?</p><h2>Let&apos;s build something<br />that matters.</h2><p>Tell us what you&apos;re working on. We&apos;ll listen, ask useful questions, and come back with a clear next step.</p><div className="contact-actions"><a className="button button-light" href="https://t.me/edicodes_pv" target="_blank" rel="noreferrer">Message on Telegram <Arrow /></a><a className="contact-email" href="mailto:edris.qeshm2@gmail.com">Or send us an email →</a></div>
       </section>
 
-      <footer><a className="logo-lockup logo-footer" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a><p>Powering your business with technology.</p><div><a href="https://t.me/edicodes_pv" target="_blank" rel="noreferrer">Telegram · @edicodes_pv</a><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with care in Qeshm.</small></footer>
+      <footer><a className="logo-lockup logo-footer" href="#top" aria-label="Itadbeer home"><img src="/itadbeer-logo.png" alt="Itadbeer" /></a><p>Powering your business with technology.</p><div><a href="https://t.me/edicodes_pv" target="_blank" rel="noreferrer">Telegram · @edicodes_pv</a><a href="https://www.linkedin.com/company/itadbeer" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:edris.qeshm2@gmail.com">Email</a><a href="#top">Back to top ↑</a></div><small>© 2026 Itadbeer. Built with ❤️&amp; ☕</small></footer>
     </main>
   );
 }
