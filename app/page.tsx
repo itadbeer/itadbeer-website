@@ -65,7 +65,7 @@ export default function Home() {
       <section className="about" id="about">
         <div className="about-grid"><div><p className="kicker kicker-light">ABOUT ITADBEER</p><h2>Small team.<br />Serious craft.</h2></div><div className="about-copy"><p className="about-lede">Founded in 2023, Itadbeer is an independent software development team built around a simple belief: the best digital products come from close collaboration.</p><p>We stay intentionally focused. You work directly with the people designing and building your product—without layers of account management or vague handoffs. That means clearer decisions, faster feedback, and software with purpose.</p><div className="facts"><div><strong>2023</strong><span>Founded</span></div><div><strong>2</strong><span>Core team</span></div><div><strong>End-to-end</strong><span>Product delivery</span></div></div></div></div>
         <div className="team-members" aria-label="Itadbeer team members">
-          <article><span className="avatar avatar-one">ER</span><div><small>CO-FOUNDER · BACKEND</small><h3>Edris Ranjbar</h3><p>Product architecture, APIs, databases, and reliable systems.</p></div></article>
+          <article><span className="avatar avatar-one">ER</span><div><small>BACK-END DEVELOPER</small><h3>Edris Ranjbar</h3><p>Product architecture, APIs, databases, and reliable systems.</p></div></article>
           <article><span className="avatar avatar-two">AA</span><div><small>FRONT-END DEVELOPER</small><h3>Abdollah Ashrafi</h3><p>Responsive interfaces and thoughtful customer experiences.</p></div></article>
           <a href="#contact">Work directly with us <Arrow /></a>
         </div>
