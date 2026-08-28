@@ -58,7 +58,7 @@ export default function Home() {
       </section>
 
       <section className="section work" id="work">
-        <div className="section-heading"><div><p className="kicker">SELECTED WORK</p><h2>Products made for<br />the real world.</h2></div><p>Our work spans operational platforms, customer-facing experiences, and useful digital products. Every project starts with a problem worth solving.</p></div>
+        <div className="section-heading"><div><p className="kicker">SELECTED WORK</p><h2>Projects made for<br />the real world.</h2></div><p>Our work spans operational platforms, customer-facing experiences, and useful digital products. Every project starts with a problem worth solving.</p></div>
         <div className="project-grid">{projects.map((p) => <article className={`project-card ${p.tone}`} key={p.title}><div className="project-art" aria-hidden="true"><span className={`project-glyph ${p.glyph}`}>{p.glyph === 'cbr' ? 'CBR' : p.glyph === 'menu' ? '01 / 06' : '↗'}</span><i /><b /></div><div className="project-copy"><small>{p.kind}</small><h3>{p.title}</h3><p>{p.text}</p></div></article>)}</div>
       </section>
 
