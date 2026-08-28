@@ -31,7 +31,7 @@ export default function Home() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <h1>We build software that moves your business forward.</h1>
+          <h1>Empower your business with technology</h1>
           <p className="hero-lede">Itadbeer is a close-knit team of developers and designers turning ambitious ideas into fast, reliable web products, mobile apps, and custom software.</p>
           <div className="hero-actions"><a className="button" href="#contact">Tell us about your project <Arrow /></a><a className="text-link" href="#work">Explore our work <span>↓</span></a></div>
         </div>
