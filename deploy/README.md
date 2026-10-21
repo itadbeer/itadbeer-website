@@ -4,11 +4,19 @@ Repository: https://github.com/itadbeer/itadbeer-website
 
 Primary origin: https://itadbeer.com. The web server should redirect www.itadbeer.com to the primary origin. Set the static document root to `<DEPLOY_PATH>/current`, and resolve `/fa` to `fa.html` while returning actual 404s for unknown paths. Preserve the server's other websites and existing TLS configuration.
 
+## Installed production setup
+
+Nginx serves `/srv/itadbeer/current` on this server. The deployment account is `edris`. The repository deployment switch is enabled, the production environment is restricted to `main`, and the SSH key/verified host keys are encrypted environment secrets. Server address and SSH port are environment variables, not source-code values.
+
+Nginx configurations in `deploy/nginx/` provide apex/www routing, extensionless Persian URLs, real 404 responses, gzip and static-asset caching. HTML and `release.json` are not cached. Certbot manages a certificate covering the apex and www domains; its existing renewal timer is active, and an Itadbeer-specific renewal hook validates and reloads Nginx.
+
+The one-time `setup-nginx.sh` uses sudo and an already-tested GitHub artifact. It creates only Itadbeer's dedicated release directories and site configuration. With ArvanCloud forcing HTTPS, the bootstrap configuration routes challenge requests over the origin's existing default TLS state, verifies the public challenge path, then replaces it with Itadbeer's own certificate. The final active configuration uses `itadbeer-https.conf`, not the bootstrap certificate. Other site files are not edited.
+
 ## GitHub Actions
 
 Every push to `main`, pull request to `main`, and manual workflow dispatch builds and verifies the static site. Core GitHub actions are pinned to commit SHAs. Node and all build dependencies run on the GitHub runner; production needs only a static web server, SSH, Bash, GNU tar/coreutils, and standard Unix tools.
 
-The production job runs only on `main` when the repository variable `DEPLOY_ENABLED` is `true`. Until SSH and the web server are configured and verified, it remains disabled. The `production` environment should allow deployments only from `main` and need no manual approval for the requested automatic flow.
+The production job runs only on `main` when the repository variable `DEPLOY_ENABLED` is `true`. Set it to `false` to temporarily stop automatic deployments while retaining builds and tests. The `production` environment permits only `main` and needs no manual approval for the requested automatic flow. Entire workflow runs are serialized per ref to prevent competing main-branch builds from deploying out of order.
 
 Set these **production environment variables**:
 
