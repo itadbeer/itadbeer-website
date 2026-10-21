@@ -35,12 +35,34 @@ if [[ ! -e "$enabled" ]]; then
     install -m 644 "$source_dir/nginx/itadbeer-http.conf" "$available"
     ln -s "$available" "$enabled"
 fi
+if [[ -f /etc/letsencrypt/live/itadbeer.com/fullchain.pem ]]; then
+    install -m 644 "$source_dir/nginx/itadbeer-https.conf" "$available"
+else
+    # The CDN redirects HTTP challenges to HTTPS. Give those requests their own
+    # host routing instead of the existing default site's redirect to adhkar.ir.
+    install -m 644 "$source_dir/nginx/itadbeer-bootstrap-https.conf" "$available"
+fi
 if ! nginx -t; then
     rm -f -- "$enabled"
     echo 'The new site was disabled because validation failed. Nginx was not reloaded.'
     exit 1
 fi
 systemctl reload nginx
+
+# Check the actual CDN path before consuming an ACME authorization attempt.
+challenge="$base/acme/.well-known/acme-challenge"
+mkdir -p "$challenge"
+probe="itadbeer-$(date +%s)-$$"
+printf '%s' "$probe" > "$challenge/$probe"
+chmod 644 "$challenge/$probe"
+for domain in itadbeer.com www.itadbeer.com; do
+    if ! result=$(curl --fail --silent --show-error --max-time 30 "https://$domain/.well-known/acme-challenge/$probe") || [[ "$result" != "$probe" ]]; then
+        rm -f -- "$challenge/$probe"
+        echo "The CDN is not forwarding $domain to the matching origin host. Check ArvanCloud origin Host/SNI settings before retrying."
+        exit 1
+    fi
+done
+rm -f -- "$challenge/$probe"
 
 # Reuse the server's existing ACME account. No new account or terms acceptance.
 certbot certonly --non-interactive --webroot -w "$base/acme" --cert-name itadbeer.com -d itadbeer.com -d www.itadbeer.com --keep-until-expiring
