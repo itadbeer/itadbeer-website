@@ -1,5 +1,6 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {};
+// Both languages are presentation pages; navigation works with ordinary links.
+const nextConfig: NextConfig = { output: 'export' };
 
 export default nextConfig;
