@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { content, type Locale } from './content';
 
-// No custom domain is configured in Sites. Keep every discovery URL on the live origin.
+// The production origin is shared by all discovery and social metadata.
 import { siteUrl } from '../site.config.mjs';
 export { siteUrl };
 

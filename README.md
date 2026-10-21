@@ -20,7 +20,7 @@ The build wrapper lets successful Vinext builds exit naturally on Windows, avoid
 
 ## SEO and assets
 
-`app/site-metadata.ts` defines language-specific metadata, canonical URLs, hreflang, Open Graph and Twitter cards. The static optimizer generates `robots.txt` and `sitemap.xml` with reciprocal language alternates. `site.config.mjs` defines the current Sites origin because no custom domain was configured when verified. Update it if a custom domain becomes primary. Organization data describes the existing studio; it does not invent ratings or reviews.
+`app/site-metadata.ts` defines language-specific metadata, canonical URLs, hreflang, Open Graph and Twitter cards. The static optimizer generates `robots.txt` and `sitemap.xml` with reciprocal language alternates. `site.config.mjs` defaults to `https://itadbeer.com`; an optional `SITE_URL` environment value overrides the origin at build time. Organization data describes the existing studio; it does not invent ratings or reviews.
 
 Responsive WebP wordmarks, explicit image dimensions, lazy footer imagery, self-hosted fonts, and static HTML reduce initial work. The optimized 1200 × 630 social image is separate from page-load assets. Font licenses are in `public/fonts/`. Asset cache rules live in `public/_headers`; the local preview applies equivalent rules.
 
@@ -49,4 +49,8 @@ One run per reported page, not field measurements or a multi-run median. The ori
 
 TypeScript and production build passed. Rendered HTTP checks verified both language documents, metadata, discovery files, fonts and unknown-path 404s. Browser checks verified mobile/desktop RTL, no horizontal overflow, both language links and contact anchor navigation. No external messages were sent.
 
-Sites source synchronization remained blocked by `Empty reply from server` from `git.chatgpt-team.site`; deployment and live-provider verification are pending.
+## GitHub and Linux hosting
+
+The public source repository is [itadbeer/itadbeer-website](https://github.com/itadbeer/itadbeer-website). `.github/workflows/deploy.yml` builds and validates `main` and pull requests. The production job uses SSH to upload an immutable static release, switch an atomic symlink, verify the exact production commit and Persian page, and roll back on failure. See [deployment setup and variables](deploy/README.md).
+
+Production setup is in progress. Deployment is disabled until server access and the domain configuration are verified. The earlier Sites host remains separate; its Git source host was unreachable during the previous publishing attempt.
